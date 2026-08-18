@@ -25,7 +25,7 @@ GPO-CLIENTS-PareFeu
 
 Elle est liée directement à l'OU `Clients`.
 
-![GPO Pare-feu liée à l'OU Clients](../screenshots/gpo/06-gpo-parefeu-liee-ou-clients.png)
+![GPO Pare-feu liée à l'OU Clients](../screenshots/06-gpo-parefeu-liee-ou-clients.png)
 
 ---
 
@@ -41,7 +41,7 @@ Configuration ordinateur
             └── Pare-feu Windows Defender avec fonctions avancées de sécurité
 ```
 
-![Configuration du pare-feu dans la GPO](../screenshots/gpo/07-configuration-parefeu-gpo.png)
+![Configuration du pare-feu dans la GPO](../screenshots/07-configuration-parefeu-gpo.png)
 
 ---
 
@@ -57,7 +57,7 @@ Connexions sortantes : Autoriser
 
 Cette configuration permet de bloquer par défaut les connexions entrantes qui ne correspondent pas à une règle autorisée, tout en permettant au poste d'initier des connexions sortantes.
 
-![Profil de domaine configuré](../screenshots/gpo/08-parefeu-profil-domaine-configure.png)
+![Profil de domaine configuré](../screenshots/08-parefeu-profil-domaine-configure.png)
 
 ---
 
@@ -69,7 +69,7 @@ Avant de forcer l'actualisation des stratégies, l'état du pare-feu est contrô
 Get-NetFirewallProfile | Select-Object Name, Enabled, DefaultInboundAction, DefaultOutboundAction
 ```
 
-![État du pare-feu avant actualisation de la GPO](../screenshots/gpo/09-parefeu-client-avant-gpo.png)
+![État du pare-feu avant actualisation de la GPO](../screenshots/09-parefeu-client-avant-gpo.png)
 
 ---
 
@@ -83,7 +83,7 @@ gpupdate /force
 
 La mise à jour de la stratégie ordinateur et de la stratégie utilisateur se termine sans erreur.
 
-![Actualisation des stratégies réussie](../screenshots/gpo/10-gpupdate-parefeu-reussi.png)
+![Actualisation des stratégies réussie](../screenshots/10-gpupdate-parefeu-reussi.png)
 
 ---
 
@@ -97,7 +97,7 @@ gpresult /scope computer /r
 
 La GPO `GPO-CLIENTS-PareFeu` apparaît parmi les stratégies appliquées à l'ordinateur.
 
-![GPO Pare-feu appliquée sur CLIENT01](../screenshots/gpo/11-gpresult-parefeu-applique.png)
+![GPO Pare-feu appliquée sur CLIENT01](../screenshots/11-gpresult-parefeu-applique.png)
 
 ---
 
@@ -119,7 +119,7 @@ Private   True    Block    Allow
 Public    True    Block    Allow
 ```
 
-![Configuration effective du pare-feu](../screenshots/gpo/12-parefeu-active-store-client01.png)
+![Configuration effective du pare-feu](../screenshots/12-parefeu-active-store-client01.png)
 
 ---
 
