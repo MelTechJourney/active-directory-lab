@@ -25,7 +25,7 @@ GPO-CLIENTS-PareFeu
 
 Elle est liée directement à l'OU `Clients`.
 
-![GPO Pare-feu liée à l'OU Clients](screenshots/06-gpo-parefeu-liee-ou-clients.png)
+![GPO Pare-feu liée à l'OU Clients](../screenshots/gpo/06-gpo-parefeu-liee-ou-clients.png)
 
 ---
 
